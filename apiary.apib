@@ -5,7 +5,7 @@ HOST: http://www.google.com
 Eve Stuff API gives access to my ship setups, blueprints and other completely useless eve stuff if you'r not into eve and if you'r not me. Trail project obviously.
 
 # Group Notes
-Notes related resources of the **Notes API**
+Ship and Ship setups: allows to view, add, modify, delete ships and ship-setups
 
 ## Ships Collection [/ships]
 ### List all ships for which i have setups [GET]
@@ -26,13 +26,13 @@ Notes related resources of the **Notes API**
 
         { "id": 3, "shipclass": "battlecruiser", "shiptype": "Drake", "shipname": "Delta" }
 
-## Note [/notes/{id}]
-A single Note object with all its details
+## Ship [/ships/{id}]
+Ship details and links to setups
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + id (required, number, `1`) ... Numeric `id` of the Ship to perform action with. Has example value.
 
-### Retrieve a Note [GET]
+### Retrieve a Ship [GET]
 + Response 200 (application/json)
 
     + Header
