@@ -33,7 +33,7 @@ Ship details and links to setups
     + id (required, number, `1`) ... Numeric `id` of the Ship to perform action with. Has example value.
 
 ### Retrieve a Ship [GET]
-+ Response 200 (application/json)
++ Response 200 (application/json+HAL)
 
     + Header
 
@@ -41,7 +41,15 @@ Ship details and links to setups
 
     + Body
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
+            { "id": 3,
+              "shipclass": "battlecruiser"
+              "shiptype": "Drake"
+              "faction": "Caldari"
+              
+              "_links": {
+                  "setups": {"href": "/ships/3/setups" }
+              }
+             }
 
-### Remove a Note [DELETE]
+### Remove a Ship [DELETE]
 + Response 204
